@@ -82,8 +82,8 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/EKGF/site)
+The site is at the moment deployed on a free personal account of [ZEIT Now](https://zeit.co/docs).
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/EKGF/site)
+You can always see the latest version that has been pushed to the Github repository here: [https://ekgf-site.now.sh/](https://ekgf-site.now.sh/).
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+The dashboard can be seen here: [https://zeit.co/ekgf/ekgf-site](https://zeit.co/ekgf/ekgf-site)
