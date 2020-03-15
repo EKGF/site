@@ -1,6 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import { Link } from "gatsby-theme-material-ui";
+
+const convertFileNameToUrl = node =>
+  node.relativePath === 'pages/index.js' ? '/' : 
+  node.relativePath.replace("pages/", "").replace("\.js", "")
+
+const cellForFileName = node => {
+  return node.relativePath.startsWith('pages/') ?
+    <td><Link to={convertFileNameToUrl(node)}>{node.relativePath}</Link></td> :
+    <td>{node.relativePath}</td>
+}
 
 export default ({ data }) => {
   //console.log(data)
@@ -11,16 +22,16 @@ export default ({ data }) => {
         <table>
           <thead>
             <tr>
-              <th>relativePath</th>
-              <th>prettySize</th>
-              <th>extension</th>
-              <th>birthTime</th>
+              <th>Path</th>
+              <th>Size</th>
+              <th>Type</th>
+              <th>Created</th>
             </tr>
           </thead>
           <tbody>
             {data.allFile.edges.map(({ node }, index) => (
               <tr key={index}>
-                <td>{node.relativePath}</td>
+                {cellForFileName(node)}
                 <td>{node.prettySize}</td>
                 <td>{node.extension}</td>
                 <td>{node.birthTime}</td>
