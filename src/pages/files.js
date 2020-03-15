@@ -3,11 +3,11 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
-  console.log(data)
+  //console.log(data)
   return (
     <Layout>
       <div>
-        <h1>My Site's Files</h1>
+        <h1>All Files at this site:</h1>
         <table>
           <thead>
             <tr>
