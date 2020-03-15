@@ -7,6 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: `Enterprise Knowledge Graph Foundation`,
+    shortTitle: 'EKGF',
     description: `The Enterprise Knowledge Graph Foundation defines and facilitates the EKG market.`,
     author: `gatsbyjs`,
   },
