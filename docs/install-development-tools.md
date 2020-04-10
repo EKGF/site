@@ -24,3 +24,6 @@ npm i -g now
 
 See also https://ekgf-site.now.sh
 
+---
+
+- [Home](../README.md)
