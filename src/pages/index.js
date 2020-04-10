@@ -7,7 +7,7 @@ import SEO from '../components/seo'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
-import ListSubheader from '@material-ui/core/ListSubheader'
+// import ListSubheader from '@material-ui/core/ListSubheader'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
@@ -30,6 +30,10 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+function ListItemLink(props) {
+  return <ListItem button component="a" {...props} />;
+}
+
 const IndexPage = () => {
 
   const classes = useStyles()
@@ -44,6 +48,8 @@ const IndexPage = () => {
       case "info":
         setInfo(!info)
         break
+      default:
+        break
     }
   }
 
@@ -57,10 +63,9 @@ const IndexPage = () => {
           </div>
         </Grid>
         <Grid item xs={8}>
-          <h1>Gatsby Material UI Starter</h1>
+          <h1>Join the EKG Foundation at the Columbia Knowledge Graph Conference May 6-7, 2020</h1>
           <h5>
-            A responsive, minimalist Gatsby starter based on the world's most
-            popular React UI framework.
+            Blah
           </h5>
         </Grid>
       </Grid>
@@ -78,25 +83,17 @@ const IndexPage = () => {
       </ListItem>
       <Collapse in={!features} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
+          <ListItemLink className={classes.nested} href="/ontology-publishing">
+            <ListItemIcon><Done /></ListItemIcon>
+            <ListItemText primary="Ontology Publishing" />
+          </ListItemLink>
           <ListItem button className={classes.nested}>
             <ListItemIcon><Done /></ListItemIcon>
-            <ListItemText primary="Material UI Framework" />
+            <ListItemText primary="Github Repository" />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon><Done /></ListItemIcon>
-            <ListItemText primary="Progressive Web App" />
-          </ListItem>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon><Done /></ListItemIcon>
-            <ListItemText primary="SEO" />
-          </ListItem>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon><Done /></ListItemIcon>
-            <ListItemText primary="Offline Support" />
-          </ListItem>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon><Done /></ListItemIcon>
-            <ListItemText primary="Roboto Typeface (self hosted)" />
+            <ListItemText primary="Measurement Criteria" />
           </ListItem>
         </List>
       </Collapse>
@@ -111,11 +108,15 @@ const IndexPage = () => {
         <List component="div" disablePadding>
           <ListItem button className={classes.nested}>
             <ListItemIcon><Done /></ListItemIcon>
-            <ListItemText primary="Based on Gatsby Default Starter" />
+            <ListItemText primary="Maturity Criteria" />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon><Done /></ListItemIcon>
-            <ListItemText primary="Uses Gatsby Material UI Plugin" />
+            <ListItemText primary="Business Case" />
+          </ListItem>
+          <ListItem button className={classes.nested}>
+            <ListItemIcon><Done /></ListItemIcon>
+            <ListItemText primary="Building Community" />
           </ListItem>
         </List>
       </Collapse>

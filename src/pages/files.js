@@ -5,7 +5,7 @@ import { Link } from "gatsby-theme-material-ui";
 
 const convertFileNameToUrl = node =>
   node.relativePath === 'pages/index.js' ? '/' : 
-  node.relativePath.replace("pages/", "").replace("\.js", "").replace("\.md", "")
+  node.relativePath.replace("pages/", "").replace(".js", "").replace(".md", "")
 
 const cellForFileName = node => {
   return node.relativePath.startsWith('pages/') ?

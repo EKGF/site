@@ -10,9 +10,17 @@ On Mac OS X you do that as follows:
 brew install node
 ```
 
-## Install the Gatsby Command Line utility
+## Install the Gatsby CLI
 
 ```
 npm install -g gatsby-cli
 ```
+
+## Install the ZEIT Now CLI
+
+```
+npm i -g now
+```
+
+See also https://ekgf-site.now.sh
 
