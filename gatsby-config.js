@@ -7,6 +7,8 @@
 module.exports = {
   siteMetadata: {
     title: `Enterprise Knowledge Graph Foundation`,
+    logoFile: 'logo.png',
+    logoTypeFile: 'logo1.png',
     shortTitle: 'EKGF',
     description: `The Enterprise Knowledge Graph Foundation defines and facilitates the EKG market.`,
     author: `gatsbyjs`,
@@ -42,7 +44,7 @@ module.exports = {
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         //display: `standalone`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.ico`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
         //icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },

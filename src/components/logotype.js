@@ -11,13 +11,17 @@ import Img from 'gatsby-image'
  * For more information, see the docs:
  * - `gatsby-image`: https://gatsby.dev/gatsby-image
  * - `StaticQuery`: https://gatsby.dev/staticquery
+ * 
+ * 
+ * 
+ * NOTE: There's some relative path nonsense going on here, I think. can't find the file when included in the header
  */
 
-const Image = () => (
+const LogoType = () => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "logo.png" }) {
+        placeholderImage: file(relativePath: { eq: "logo1.png" }) {
           childImageSharp {
             fluid(maxWidth: 300) {
               ...GatsbyImageSharpFluid
@@ -26,7 +30,7 @@ const Image = () => (
         }
       }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => <Img width="120px" fluid={data.placeholderImage.childImageSharp.fluid} />}
   />
 )
-export default Image
+export default LogoType

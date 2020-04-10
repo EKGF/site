@@ -6,8 +6,10 @@ export default ({ data }) => (
   <Layout>
     <h1>About {data.site.siteMetadata.title}</h1>
     <p>
-      We're the only site running on your computer dedicated to showing the best
-      photos and videos of pandas eating lots of food.
+    The  Enterprise Knowledge Graph Foundation (EKGF) is a non-profit trade organization serving as the authoritative source of standards, 
+    best practices and open source components for organizations that deploy an enterprise knowledge graph.  
+    The Foundation establishes a collaborative community and builds the marketplace for related services, products and datasets.
+
     </p>
   </Layout>
 )

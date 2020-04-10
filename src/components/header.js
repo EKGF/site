@@ -21,6 +21,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import HomeIcon from '@material-ui/icons/Home'
 import ListIcon from '@material-ui/icons/ViewList'
+import LogoType from './logotype'
 
 const drawerWidth = 240
 
@@ -33,7 +34,7 @@ const useStyles = makeStyles(theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    background: 'linear-gradient(to right,  #663399, #5B72FF)',
+    background: 'linear-gradient(to right,  #ffa800ff, #ffa800ff)',
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -115,6 +116,7 @@ const Header = ({ siteTitle }) => {
           >
             <MenuIcon />
           </IconButton>
+          <LogoType />
           <Typography variant="h6" color="inherit">
             {siteTitle}
           </Typography>
@@ -154,6 +156,22 @@ const Header = ({ siteTitle }) => {
                 <ListIcon />
               </ListItemIcon>
               <ListItemText>Foundry</ListItemText>
+            </ListItem>
+          </Link>
+          <Link to="/principles">
+            <ListItem button>
+              <ListItemIcon>
+                <ListIcon />
+              </ListItemIcon>
+              <ListItemText>Principles</ListItemText>
+            </ListItem>
+          </Link>
+          <Link to="/dennis">
+            <ListItem button>
+              <ListItemIcon>
+                <ListIcon />
+              </ListItemIcon>
+              <ListItemText>Dennis</ListItemText>
             </ListItem>
           </Link>
           <Link to="/contact">
